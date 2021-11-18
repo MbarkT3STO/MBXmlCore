@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using MBXmlCore.Core;
 using MBXmlCore.Enums;
 
@@ -25,14 +27,60 @@ namespace MBXmlCore.ClassicTest
                                                                new Order(14, "Eddawdi Nawal",   "PRD-1", 2000)
                                                            };
 
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             var path = Environment.GetFolderPath( Environment.SpecialFolder.Desktop ) + "\\XDocument.xml";
-            var expo = new Exporter();
 
-            expo.Export( Orders , path , "Orders" , "Order" , DataInsertionType.Attributes );
+            //------------------------------
+            /* Export data as an XML file  */
+            //------------------------------
+            //var expo = new Exporter();
+            //expo.Export( Orders , path , "Orders" , "Order" , DataInsertionType.Attributes );
 
-            Console.WriteLine( "Done!" );
+            //Console.WriteLine( "Done!" );
+
+
+
+
+            var importer     = new Importer();
+
+            //---------------------------------------------------
+            /* Import XML data from local XML file || EXAMPLE 1 */
+            //---------------------------------------------------
+            //var importedDocument = await importer.ImportAsync( path );
+            //var selectedData = importedDocument.Root.Elements( "Order" ).Select( x => new
+            //                                                                        {
+            //                                                                            Id = x.Attribute( "Id" ).Value ,
+            //                                                                            Client = x.Attribute( "Client" ).Value ,
+            //                                                                            Product = x.Attribute( "Product" ).Value ,
+            //                                                                            Total = x.Attribute( "Total" ).Value
+            //                                                                        } );
+
+            //foreach (var order in selectedData )
+            //{
+            //    Console.WriteLine( $"{order.Id}, {order.Client}, {order.Product}, {order.Total}" );
+            //}
+
+            //---------------------------------------------------
+            /* Import XML data from local XML file || EXAMPLE 2 */
+            //---------------------------------------------------
+            //var importedData = await importer.ImportAsync<Order>( path , DataSelectionType.Attributes );
+
+            //foreach (var order in importedData)
+            //{
+            //    Console.WriteLine( $"{order.Id}, {order.Client}, {order.Product}, {order.Total}" );
+            //}  
+            
+            //---------------------------------------------------
+            /* Import XML data from local XML file || EXAMPLE 3 */
+            //---------------------------------------------------
+            //var webPath      = "https://ia601501.us.archive.org/12/items/XDocument/XDocument.xml";
+            //var importedData = await importer.ImportAsync<Order>( webPath , DataSelectionType.Attributes );
+
+            //foreach (var order in importedData)
+            //{
+            //    Console.WriteLine( $"{order.Id}, {order.Client}, {order.Product}, {order.Total}" );
+            //}
         }
     }
 }

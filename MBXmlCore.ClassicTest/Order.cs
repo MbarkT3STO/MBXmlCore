@@ -21,5 +21,10 @@ namespace MBXmlCore.ClassicTest
             Total   = total;
         }
 
+        public Order()
+        {
+            
+        }
+
     }
 }
