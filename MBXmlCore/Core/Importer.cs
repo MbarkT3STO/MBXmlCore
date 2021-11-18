@@ -84,7 +84,7 @@ namespace MBXmlCore.Core
         }
 
         /// <summary>
-        /// Asynchronously <inheritdoc cref="Import"/>
+        /// Asynchronously <inheritdoc cref="Import(string)"/>
         /// </summary>
         /// <returns><see cref="Task"/></returns>
         public Task<XDocument> ImportAsync(string path)
@@ -107,7 +107,7 @@ namespace MBXmlCore.Core
         }
 
         /// <summary>
-        /// Asynchronously <inheritdoc cref="Import{T}"/>
+        /// Asynchronously <inheritdoc cref="Import{T}(string, DataSelectionType)"/>
         /// </summary>
         /// <returns><see cref="Task"/></returns>
         public Task<IEnumerable<T>> ImportAsync<T>(string path, DataSelectionType selectionType = DataSelectionType.Elements) where T : class, new()
