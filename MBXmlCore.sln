@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.31903.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBXmlCore", "MBXmlCore\MBXmlCore.csproj", "{8569CF08-4B08-4CD4-AB8A-7E8498A3286F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MBXmlCore", "MBXmlCore\MBXmlCore.csproj", "{8569CF08-4B08-4CD4-AB8A-7E8498A3286F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBXmlCore.ClassicTest", "MBXmlCore.ClassicTest\MBXmlCore.ClassicTest.csproj", "{66A993B3-DB1B-4C10-86A6-0B168D895270}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8569CF08-4B08-4CD4-AB8A-7E8498A3286F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8569CF08-4B08-4CD4-AB8A-7E8498A3286F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8569CF08-4B08-4CD4-AB8A-7E8498A3286F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66A993B3-DB1B-4C10-86A6-0B168D895270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66A993B3-DB1B-4C10-86A6-0B168D895270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66A993B3-DB1B-4C10-86A6-0B168D895270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66A993B3-DB1B-4C10-86A6-0B168D895270}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

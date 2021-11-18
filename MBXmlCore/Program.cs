@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Xml.Linq;
 
 namespace MBXmlCore
 {
@@ -6,7 +8,7 @@ namespace MBXmlCore
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }

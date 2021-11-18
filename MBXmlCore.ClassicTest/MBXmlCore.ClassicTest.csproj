@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Enums\" />
+    <ProjectReference Include="..\MBXmlCore\MBXmlCore.csproj" />
   </ItemGroup>
 
 </Project>
