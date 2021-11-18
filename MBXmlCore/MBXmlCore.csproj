@@ -1,12 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>net5.0</TargetFramework>
+    <ApplicationIcon>12715467_1048221511901957_8409655708148977738_n.ico</ApplicationIcon>
+    <Description>Free and Open-Source library to Export &amp; Import data to &amp; from XML files</Description>
+    <Copyright>MB-WAR</Copyright>
+    <PackageProjectUrl>https://github.com/MbarkT3STO/MBXmlCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MbarkT3STO/MBXmlCore</RepositoryUrl>
+    <PackageIcon>12715467_1048221511901957_8409655708148977738_n.png</PackageIcon>
+    <PackageTags>csharp xml xml-parser csharp-code csharp-library xmlwriter xmlreader export-xml import-xml</PackageTags>
+    <Authors>MBARK</Authors>
+    <Company>T3STO</Company>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="12715467_1048221511901957_8409655708148977738_n.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Enums\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\Logo\12715467_1048221511901957_8409655708148977738_n.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

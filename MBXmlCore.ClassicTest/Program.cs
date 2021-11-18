@@ -70,16 +70,16 @@ namespace MBXmlCore.ClassicTest
             //{
             //    Console.WriteLine( $"{order.Id}, {order.Client}, {order.Product}, {order.Total}" );
             //}  
-            
+
             //---------------------------------------------------
             /* Import XML data from local XML file || EXAMPLE 3 */
             //---------------------------------------------------
-            //var webPath      = "https://ia601501.us.archive.org/12/items/XDocument/XDocument.xml";
-            //var importedData = await importer.ImportAsync<Order>( webPath , DataSelectionType.Attributes );
+            //var webPath = "https://ia601501.us.archive.org/12/items/XDocument/XDocument.xml";
+            //var importedData = await importer.ImportAsync<Order>(webPath, DataSelectionType.Attributes);
 
             //foreach (var order in importedData)
             //{
-            //    Console.WriteLine( $"{order.Id}, {order.Client}, {order.Product}, {order.Total}" );
+            //    Console.WriteLine($"{order.Id}, {order.Client}, {order.Product}, {order.Total}");
             //}
         }
     }
