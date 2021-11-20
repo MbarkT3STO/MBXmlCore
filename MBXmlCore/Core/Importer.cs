@@ -43,7 +43,11 @@ namespace MBXmlCore.Core
                 foreach ( var prop in properties )
                 {
                     var currentAttributeValue = element.Attribute( prop.Name )?.Value;
-                    obj.GetType().GetProperty( prop.Name )?.SetValue( obj , Convert.ChangeType(currentAttributeValue, prop.PropertyType), null );
+                    var convertedCurrentAttributeValue = prop.PropertyType.IsEnum
+                                                             ? Enum.Parse( prop.PropertyType , currentAttributeValue )
+                                                             : Convert.ChangeType( currentAttributeValue , prop.PropertyType );
+
+                    obj.GetType().GetProperty( prop.Name )?.SetValue( obj , convertedCurrentAttributeValue, null );
                 }
 
                 yield return obj;
@@ -61,7 +65,11 @@ namespace MBXmlCore.Core
                 foreach ( var prop in properties )
                 {
                     var currentElementValue = element.Element( prop.Name )?.Value;
-                    obj.GetType().GetProperty(prop.Name)?.SetValue(obj, Convert.ChangeType(currentElementValue, prop.PropertyType), null);
+                    var convertedCurrentElementValue = prop.PropertyType.IsEnum
+                                                           ? Enum.Parse( prop.PropertyType, currentElementValue )
+                                                           : Convert.ChangeType( currentElementValue , prop.PropertyType );
+
+                    obj.GetType().GetProperty( prop.Name )?.SetValue( obj , convertedCurrentElementValue , null );
                 }
 
                 yield return obj;

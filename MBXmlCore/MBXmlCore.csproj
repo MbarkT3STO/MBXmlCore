@@ -13,6 +13,8 @@
     <Authors>MBARK</Authors>
     <Company>T3STO</Company>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
+    <FileVersion></FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
